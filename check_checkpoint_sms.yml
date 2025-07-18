@@ -9,3 +9,5 @@
   - name: show-gateways-and-servers
     cp_mgmt_show_gateways_and_servers:
       details_level: full
+  - name: show-updatable-object
+    cp_mgmt_updatable_object_facts:
