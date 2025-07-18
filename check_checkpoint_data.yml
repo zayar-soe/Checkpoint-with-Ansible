@@ -1,5 +1,5 @@
 
-- name: Configure GAiA gateway
+- name: check GAiA gateway
   hosts: cpgws
   connection: httpapi
   gather_facts: no
