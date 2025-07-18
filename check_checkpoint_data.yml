@@ -2,15 +2,13 @@
   hosts: checkpoint_test
   gather_facts: no
   collections:
-    - checkpoint.gaia
+    - check_point.gaia
 
   tasks:
-    - name: Get system version
-      check_point.gaia.command:
-        commands:
-          - show version all
-      register: version_output
-
-    - name: Print system version output
+    - name: Show current DNS configuration
+      check_point.gaia.cp_gaia_dns_facts:
+      
+    - name: Display DNS settings
       debug:
-        var: version_output.stdout_lines
+        var: ansible_facts.cp_gaia_dns
+
