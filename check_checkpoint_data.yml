@@ -1,5 +1,5 @@
 - name: Check Check Point Gateway Data
-  hosts: cpgw01
+  hosts: cpgws
   gather_facts: no
   collections:
     - check_point.gaia
