@@ -7,6 +7,5 @@
     - check_point.gaia
 
   tasks:
-    - name: Set login banner
-      cp_gaia_banner:
-        banner_message: "Authorized access only."
+    - name: Show api versions
+      check_point.gaia.cp_gaia_api_versions_facts:
