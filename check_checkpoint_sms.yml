@@ -1,0 +1,8 @@
+---
+- name: check Checkpoint sms
+  hosts: cpsms
+  connection: httpapi
+  gather_facts: no
+  tasks:
+  - name: show-checkpoint-host
+    cp_mgmt_checkpoint_host_facts:
