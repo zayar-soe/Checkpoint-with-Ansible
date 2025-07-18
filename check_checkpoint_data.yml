@@ -6,7 +6,7 @@
 
   tasks:
     - name: Get system version
-      checkpoint.gaia.command:
+      check_point.gaia.command:
         commands:
           - show version all
       register: version_output
