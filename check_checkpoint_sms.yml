@@ -5,7 +5,9 @@
   gather_facts: no
   collections:
   - check_point.mgmt
-  tasks:
+  tasks:  
+  - name: Show api versions
+    check_point.gaia.cp_gaia_api_versions_facts:
   - name: show-checkpoint-host
     cp_mgmt_checkpoint_host_facts:
   - name: show-gateways-and-servers
