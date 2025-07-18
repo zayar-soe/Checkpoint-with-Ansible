@@ -1,0 +1,16 @@
+- name: Check Check Point Gateway Data
+  hosts: checkpoint_test
+  gather_facts: no
+  collections:
+    - checkpoint.gaia
+
+  tasks:
+    - name: Get system version
+      checkpoint.gaia.command:
+        commands:
+          - show version all
+      register: version_output
+
+    - name: Print system version output
+      debug:
+        var: version_output.stdout_lines
