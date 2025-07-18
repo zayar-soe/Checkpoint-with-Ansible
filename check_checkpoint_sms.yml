@@ -3,6 +3,8 @@
   hosts: cpsms
   connection: httpapi
   gather_facts: no
+  collections:
+  - check_point.mgmt
   tasks:
   - name: show-checkpoint-host
     cp_mgmt_checkpoint_host_facts:
