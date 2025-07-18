@@ -6,6 +6,8 @@
   collections:
   - check_point.mgmt
   tasks:
+  - name: show-checkpoint-host
+    cp_mgmt_checkpoint_host_facts:
   - name: show-gateways-and-servers
     cp_mgmt_show_gateways_and_servers:
       details_level: full
