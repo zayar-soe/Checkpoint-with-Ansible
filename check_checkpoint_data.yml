@@ -1,14 +1,12 @@
-- name: Check Check Point Gateway Data
+
+- name: Configure GAiA gateway
   hosts: cpgws
+  connection: httpapi
   gather_facts: no
   collections:
     - check_point.gaia
 
   tasks:
-    - name: Show current DNS configuration
-      check_point.gaia.cp_gaia_dns_facts:
-      
-    - name: Display DNS settings
-      debug:
-        var: ansible_facts.cp_gaia_dns
-
+    - name: Set login banner
+      cp_gaia_banner:
+        banner_message: "Authorized access only."
